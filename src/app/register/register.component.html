@@ -12,13 +12,16 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
     <button type="submit" class="btn btn-primary" (click)="onSubmit(firstName.value,lastName.value,Email.value,Password.value)">Submit</button> 
     &nbsp;  
-    <button type="reset" >Clear</button>  
+    <button type="reset" (click)="onClear()">Clear</button>  
 </form> <br>
-<ul *ngIf="show" style="list-style-type: none;" class="form-inline">
-<h2>You are registered:</h2>
-    <br>
-    <li>First Name: &nbsp;{{firstName.value}}</li>
-    <li>LastName: &nbsp;  {{lastName.value}}</li>
-    <li>Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{Email.value}}</li>
-    <li>Password: &nbsp; {{Password.value}}</li>   
-</ul>
+<div *ngIf="show" >
+<h2>&nbsp; &nbsp; &nbsp; Your Registered Details:</h2>
+<h3 style="color:lime;"><span style="color:white;">
+    &nbsp; &nbsp; First Name:</span> {{firstName.value}}</h3>
+<h3 style="color:lime;"><span style="color:white;">
+    &nbsp; &nbsp; LastName:</span>&nbsp; {{lastName.value}}</h3>
+<h3 style="color:lime;"><span style="color:white;">
+    &nbsp; &nbsp; Email:</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{Email.value}}</h3>
+<h3 style="color:lime"><span style="color:white;">
+    &nbsp; &nbsp; Password:</span> &nbsp;{{Password.value}}</h3>   
+</div>

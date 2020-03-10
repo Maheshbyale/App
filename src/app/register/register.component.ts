@@ -14,6 +14,10 @@ export class RegisterComponent implements OnInit {
     this.show=true;
     console.log("You submitted");
   }
+  onClear()
+  {
+    this.show=false;
+  }
   ngOnInit() {
   }
 

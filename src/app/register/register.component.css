@@ -2,7 +2,11 @@
     color:white;
     }
 h2{
-    color:purple;
+    color:greenyellow;
+}
+div{
+    color: white;
+    display:inline;
 }
 .sub{
     font-size: 20px;

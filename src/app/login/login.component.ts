@@ -13,9 +13,12 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 show;
-
   onLogin(){
     this.show=true;
     console.log("login submitted");
+  }
+  onCancel()
+  {
+    this.show=false;
   }
 }

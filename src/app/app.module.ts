@@ -26,7 +26,7 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
     
   ],
   providers: [],

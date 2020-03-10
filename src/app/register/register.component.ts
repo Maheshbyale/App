@@ -9,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
     show; 
     
-  onSubmit()
+  onSubmit(firstName,lastName,Email,Password)
   {
-    this.show=false;
+    this.show=true;
     console.log("You submitted");
   }
   ngOnInit() {

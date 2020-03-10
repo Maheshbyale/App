@@ -4,14 +4,21 @@
 &nbsp;&nbsp;    <label for="FirstName">FirstName:</label> &nbsp; &nbsp;&nbsp; 
     <input type="email" class="form-control" placeholder="Enter FirstName" id="FirstName" #firstName><br><br>
 &nbsp;&nbsp;    <label for="email">LastName:</label> &nbsp; &nbsp;&nbsp; 
-    <input type="email" class="form-control" placeholder="LastName" id="LastName" #lastName><br><br>
+    <input type="email" class="form-control" placeholder="Enter LastName" id="LastName" #lastName><br><br>
 &nbsp;&nbsp;    <label for="email">Email address:</label>
     <input type="email" class="form-control" placeholder="Enter email" id="email" #Email><br><br>
 &nbsp;&nbsp;    <label for="pwd">Password:</label> &nbsp; &nbsp; &nbsp;
     <input type="password" class="form-control" placeholder="Enter password" id="pwd" #Password><br><br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button> &nbsp;  
+    <button type="submit" class="btn btn-primary" (click)="onSubmit(firstName.value,lastName.value,Email.value,Password.value)">Submit</button> 
+    &nbsp;  
     <button type="reset" >Clear</button>  
-       
-</form>
-<br>
+</form> <br>
+<ul *ngIf="show" style="list-style-type: none;" class="form-inline">
+<h2>You are registered:</h2>
+    <br>
+    <li>First Name: &nbsp;{{firstName.value}}</li>
+    <li>LastName: &nbsp;  {{lastName.value}}</li>
+    <li>Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{Email.value}}</li>
+    <li>Password: &nbsp; {{Password.value}}</li>   
+</ul>

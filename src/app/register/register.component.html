@@ -10,18 +10,19 @@
 &nbsp;&nbsp;    <label for="pwd">Password:</label> &nbsp; &nbsp; &nbsp;
     <input type="password" class="form-control" placeholder="Enter password" id="pwd" #Password><br><br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-    <button type="submit" class="btn btn-primary" (click)="onSubmit(firstName.value,lastName.value,Email.value,Password.value)">Submit</button> 
+    <button type="submit" class="btn btn-primary" (click)="onSubmit(firstName.value,lastName.value,Email.value,Password.value)" >Submit </button> 
     &nbsp;  
     <button type="reset" (click)="onClear()">Clear</button>  
 </form> <br>
 <div *ngIf="show" >
-<h2>&nbsp; &nbsp; &nbsp; Your Registered Details:</h2>
-<h3 style="color:lime;"><span style="color:white;">
-    &nbsp; &nbsp; First Name:</span> {{firstName.value}}</h3>
-<h3 style="color:lime;"><span style="color:white;">
-    &nbsp; &nbsp; LastName:</span>&nbsp; {{lastName.value}}</h3>
-<h3 style="color:lime;"><span style="color:white;">
-    &nbsp; &nbsp; Email:</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{Email.value}}</h3>
-<h3 style="color:lime"><span style="color:white;">
-    &nbsp; &nbsp; Password:</span> &nbsp;{{Password.value}}</h3>   
-</div>
+    <h2>&nbsp; &nbsp; &nbsp; Your Registered Details:</h2>
+    <h3 style="color:lime;"><span style="color:white;">
+        &nbsp; &nbsp; First Name:</span> {{firstName.value}}</h3>
+    <h3 style="color:lime;"><span style="color:white;">
+        &nbsp; &nbsp; LastName:</span>&nbsp; {{lastName.value}}</h3>
+    <h3 style="color:lime;"><span style="color:white;">
+        &nbsp; &nbsp; Email:</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{Email.value}}</h3>
+    <h3 style="color:lime"><span style="color:white;">
+        &nbsp; &nbsp; Password:</span> &nbsp;{{Password.value}}</h3>   
+    <button type="submit" (click)="onConf()">Confirm</button>
+    </div>

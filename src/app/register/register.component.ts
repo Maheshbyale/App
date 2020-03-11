@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 
 @Component({
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-    show; 
+   @Input() show; 
     
   onSubmit(firstName,lastName,Email,Password)
   {
@@ -17,6 +17,10 @@ export class RegisterComponent implements OnInit {
   onClear()
   {
     this.show=false;
+  }
+  onConf()
+  {
+    confirm("Successfully registered");
   }
   ngOnInit() {
   }
